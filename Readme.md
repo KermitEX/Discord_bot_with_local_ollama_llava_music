@@ -1,6 +1,6 @@
 # Discord Bot with Ollama, Llava & Music 🤖 🎵
 
-A powerful Discord bot that combines local AI models (Ollama & Llava) with music playback features. Run advanced AI models locally while enjoying music and games!
+A powerful Discord bot that combines local AI models (Ollama & Llava) with music playback features. Run advanced AI models locally while enjoying music and games!!
 
 ## Features 🌟
 
