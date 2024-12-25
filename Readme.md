@@ -1,38 +1,40 @@
-# Luna - Discord AI Music Bot 🤖 🎵
+# Discord Bot with Ollama, Llava & Music 🤖 🎵
 
-A versatile Discord bot combining AI capabilities with music features. Luna can chat intelligently, analyze images, play music, and manage song queues.
+A powerful Discord bot that combines local AI models (Ollama & Llava) with music playback features. Run advanced AI models locally while enjoying music and games!
 
 ## Features 🌟
 
-### AI Features 🧠
-- **Chat with Luna (!ask)**
-  - Powered by llama3.2:latest (2.0 GB)
-  - Natural, personality-driven responses
-  - Casual and friendly conversation style
+### AI Integration 🧠
+- **Local AI Chat (llama3.2:latest)**
+  - Run AI locally using Ollama
+  - Fast response times
+  - No API costs
+  - Command: `!ask [question]`
 
-- **Image Analysis (!analyze)**
-  - Powered by llava:latest (4.7 GB)
-  - Detailed image descriptions
-  - Visual content understanding
+- **Image Analysis (llava:latest)**
+  - Local image processing
+  - Detailed visual descriptions
+  - No cloud dependencies
+  - Command: `!analyze [prompt]`
 
-### Music Features 🎵
-- **Music Playback**
-  - Play from YouTube URLs or search terms
-  - Queue management system
-  - High-quality audio streaming
+### Music System 🎵
+- **YouTube Integration**
+  - Play from URLs or search terms
+  - Queue management
+  - High-quality playback
 
-- **Playback Controls**
-  - `!play` - Play a song
+- **Music Controls**
+  - `!play` - Play/queue songs
   - `!pause`/`!resume` - Control playback
   - `!skip` - Skip current song
-  - `!queue` - View song queue
+  - `!queue` - View playlist
   - `!volume [0-200]` - Adjust volume
 
-### Gaming Features 🎮
-- Rock Paper Scissors (`!rps @user`)
-  - Challenge other users
+### Games 🎮
+- **Rock Paper Scissors**
+  - Challenge friends
   - Interactive buttons
-  - Automatic scoring
+  - Auto-scoring
 
 ## Setup Guide 🚀
 
@@ -43,36 +45,32 @@ A versatile Discord bot combining AI capabilities with music features. Luna can 
 - Discord Bot Token
 - 8GB RAM (16GB recommended)
 
-### Installation Steps
-
-1. **Clone Repository**
+### Quick Start
+1. **Clone & Install**
 ```bash
-git clone <repository-url>
-cd discord-ai-music-bot
-```
-
-2. **Install Dependencies**
-```bash
+git clone https://github.com/KermitEX/Discord_bot_with_local_ollama_llava_music.git
+cd Discord_bot_with_local_ollama_llava_music
 pip install -r requirements.txt
 ```
 
-3. **Install Ollama**
-- Linux/Mac: `curl https://ollama.ai/install.sh | sh`
-- Windows: Download from [ollama.ai/download](https://ollama.ai/download)
-
-4. **Configure Bot**
-- Create `.env` file:
-```env
-DISCORD_TOKEN=your_discord_bot_token_here
+2. **Install Ollama**
+```bash
+# Linux/Mac
+curl https://ollama.ai/install.sh | sh
+# Windows: Download from ollama.ai/download
 ```
 
-5. **Pull AI Models**
+3. **Configure**
 ```bash
+# Create .env file
+DISCORD_TOKEN=your_token_here
+
+# Pull AI models
 ollama pull llama3.2:latest
 ollama pull llava:latest
 ```
 
-6. **Start Bot**
+4. **Run**
 ```bash
 python discord_ollama_bot.py
 ```
@@ -80,63 +78,34 @@ python discord_ollama_bot.py
 ## Commands 💬
 
 ### AI Commands
-- `!ask [question]` - Chat with Luna
-- `!analyze [prompt]` - Analyze an image
-- `!aihelp` - Show help message
+- `!ask [question]` - Chat with AI
+- `!analyze [prompt]` - Analyze images
+- `!aihelp` - Show help
 
 ### Music Commands
-- `!play [song]` - Play or queue a song
-- `!queue` or `!q` - View current queue
-- `!skip` - Skip current song
-- `!pause` - Pause playback
-- `!resume` - Resume playback
+- `!play [song]` - Play/queue music
+- `!queue` or `!q` - Show queue
+- `!skip` - Skip song
+- `!pause` - Pause music
+- `!resume` - Resume music
 - `!stop` - Stop playback
 - `!clear` - Clear queue
 - `!volume [0-200]` - Set volume
-- `!join` - Join voice channel
-- `!leave` - Leave voice channel
+- `!join` - Join voice
+- `!leave` - Leave voice
 
 ### Game Commands
-- `!rps @user` - Play Rock Paper Scissors
+- `!rps @user` - Rock Paper Scissors
 
 ## Project Structure 📁
 ```
-discord-ai-music-bot/
+Discord_bot_with_local_ollama_llava_music/
 ├── discord_ollama_bot.py    # Main bot file
-├── config.py               # Configuration settings
-├── requirements.txt        # Python dependencies
-├── .env                    # Environment variables
+├── config.py               # Configuration
+├── requirements.txt        # Dependencies
+├── .env                    # Environment vars
 └── .gitignore             # Git ignore rules
 ```
-
-## Troubleshooting 🔧
-
-### Common Issues
-1. **Bot Won't Connect**
-   - Check Discord token
-   - Verify internet connection
-   - Confirm bot permissions
-
-2. **Music Won't Play**
-   - Verify FFmpeg installation
-   - Check voice permissions
-   - Ensure valid YouTube URL
-
-3. **AI Not Responding**
-   - Ensure Ollama is running
-   - Verify model installation
-   - Check system resources
-
-## Required Permissions 🔑
-- Read Messages/View Channels
-- Send Messages
-- Embed Links
-- Attach Files
-- Read Message History
-- Add Reactions
-- Connect to Voice
-- Speak in Voice
-- Use Voice Activity
 
 ## Support 💡
 
@@ -148,16 +117,16 @@ discord-ai-music-bot/
   - Community discussions
   - Bot announcements
 
-### Other Support Channels
-- Create an issue on GitHub for bug reports
-- Check documentation for guides
-- Report security issues via Discord DM to admins
+### Other Support
+- Create GitHub issues for bugs
+- Check documentation
+- Report security issues via Discord DM
 
 ## License 📄
 
 ### Apache License 2.0
 
-Copyright 2024 Luna Discord AI Music Bot
+Copyright 2024 Discord Bot with Ollama, Llava & Music
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -172,7 +141,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ## Acknowledgments 🙏
-- Discord.py developers
-- Ollama team
+- Discord.py team
+- Ollama developers
 - FFmpeg project
 - yt-dlp maintainers
